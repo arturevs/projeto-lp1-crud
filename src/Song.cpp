@@ -79,3 +79,5 @@ std::ostream& operator<<(std::ostream& os, const Song &song){
     os << "Título: \"" << song.title << "\" - Autor: \"" << song.author << "\"";
     return os;
 }
+
+//see if it works
