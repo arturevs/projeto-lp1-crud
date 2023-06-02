@@ -80,4 +80,3 @@ std::ostream& operator<<(std::ostream& os, const Song &song){
     return os;
 }
 
-//see if it works
