@@ -56,6 +56,7 @@ public:
     LinkedList<T> operator +(LinkedList<T> *lista);
     // Sobrecarga do operador >>, que remove o último elemento da lista e adiciona ao node passado como parâmetro.
     std::istream& operator >>(std::istream &is, Node<T> *node);
+    LinkedList<T> operator >> (Node<T> &node)
 };
 
 /**
@@ -314,6 +315,17 @@ LinkedList<T> LinkedList<T>::operator +(LinkedList<T> *lista){
  * @param node Node a ser adicionado.
  * @return istream& 
  */
+template <typename T>
+LinkedList<T> LinkedList<T>::operator >> (Node<T> &node)
+{
+    node.setValue(tail->getValue());
+    Node<T> *curr = head;
+    while(curr->getNext() != tail){
+        curr = curr->getNext();
+    }
+    tail = curr;
+    removeValue(curr->getNext()->getValue());
+}
 
 
 #endif
