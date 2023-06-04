@@ -337,7 +337,7 @@ LinkedList<T> LinkedList<T>::operator >> (Node<T> &node)
 template <typename T>
 LinkedList<T> LinkedList<T>::operator << (Node<T> node)
 {
-    if(node == nullptr) return *this;
+    if(&node == nullptr) return *this;
     add(node);
 }
 

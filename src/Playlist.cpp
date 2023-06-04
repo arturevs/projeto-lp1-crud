@@ -106,9 +106,100 @@ bool Playlist::operator==(Playlist &b){
 }
 
 /**
- * @brief Sobrecarga de operador de inserção da playlist.
+ * @brief Sobrecarga do operador << que adiciona uma música à playlist.
+ * 
+ * @param song 
+ * @return Playlist 
  */
-std::ostream& operator<<(std::ostream& os, const Playlist& playlist){
-    os << "\"" << playlist.name << "\" - " << playlist.songs.getSize() << " música(s).";
-    return os;
-}
+
+    Playlist Playlist::operator <<(Song &song)
+    {
+        if (&song == nullptr)
+            return *this;
+        addSong(song);
+        return *this;
+    }
+
+    Playlist Playlist::operator>>(Song &song)
+    {
+        // associa ao title de song o title da última música de songs
+        song = songs.getTail()->getValue();
+        // remove a última música de songs
+        songs.removeValue(songs.getTail()->getValue());
+        // atualiza o valor de tail em songs
+        auto damn = songs.getHead();
+        while (damn->getNext() != nullptr)
+        {
+            damn = damn->getNext();
+        }
+        songs.setTail(damn);
+        return *this;
+    }
+
+    std::ostream &operator<<(std::ostream &os, Playlist &playlist)
+    {
+        os << playlist.getName() << std::endl;
+        return os;
+    }
+
+    Playlist Playlist::operator+(Playlist &playlist)
+    {
+        Playlist newPlaylist = *this;
+        auto aux = playlist.getSongs().getHead();
+        while (aux != nullptr)
+        {
+            newPlaylist.addSong(aux->getValue());
+            aux = aux->getNext();
+        }
+        return newPlaylist;
+    }
+
+    Playlist Playlist::operator+(Song &song)
+    {
+        addSong(song);
+        return *this;
+    }
+
+    void Playlist::adicionaMusicas(Playlist &playlist)
+    {
+        auto aux = playlist.getSongs().getHead();
+        while (aux != nullptr)
+        {
+            addSong(aux->getValue());
+            aux = aux->getNext();
+        }
+    }
+
+    void Playlist::removeMusicas(Playlist &playlist)
+    {
+        auto aux = playlist.getSongs().getHead();
+        while (aux != nullptr)
+        {
+            removeSong(aux->getValue());
+            aux = aux->getNext();
+        }
+    }
+
+    Playlist::Playlist(const Playlist &playlist)
+    {
+        this->name = playlist.name;
+        this->songs = playlist.songs;
+    }
+
+    Playlist Playlist::operator -(Playlist &playlist)
+    {
+        Playlist newPlaylist = *this;
+        auto aux = playlist.getSongs().getHead();
+        while (aux != nullptr)
+        {
+            newPlaylist.removeSong(aux->getValue());
+            aux = aux->getNext();
+        }
+        return newPlaylist;
+    }
+
+    Playlist Playlist::operator -(Song &song)
+    {
+        removeSong(song);
+        return *this;
+    }

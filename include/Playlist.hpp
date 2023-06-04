@@ -45,7 +45,25 @@ public:
     // Sobrecarga de operador de igualdade. 
     bool operator==(Playlist &b);
     // Sobrecarga de operador de inserção da playlist. 
-    friend std::ostream& operator<<(std::ostream& os, const Playlist& playlist);
+    Playlist operator<<(Song &song);
+    // Sobrecarga de operador de extração da playlist.
+    Playlist operator>>(Song &song);
+    // Sobrecarga de operador << ostream.
+    friend std::ostream &operator<<(std::ostream &os, Playlist &playlist);
+    // Sobrecarga de operador + com playlit de argumento
+    Playlist operator+(Playlist &playlist);
+    // Sobrecarga de operador + com song de argumento
+    Playlist operator+(Song &song);
+    // Adiciona músicas de uma playlist à outra.
+    void adicionaMusicas(Playlist &playlist);
+    // Remove músicas de uma playlist de outra.
+    void removeMusicas(Playlist &playlist);
+    // Construtor cópia.
+    Playlist(const Playlist &playlist);
+    // Sobrecarga de operador - com playlist de argumento.
+    Playlist operator-(Playlist &playlist);
+    // Sobrecarga de operador - com song de argumento.
+    Playlist operator-(Song &song);
 };
 
 #endif
