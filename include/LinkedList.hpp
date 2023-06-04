@@ -55,8 +55,8 @@ public:
     // Sobrecarga do operador de igualdade, que adiciona os elementos de uma lista a outra.
     LinkedList<T> operator +(LinkedList<T> *lista);
     // Sobrecarga do operador >>, que remove o último elemento da lista e adiciona ao node passado como parâmetro.
-    std::istream& operator >>(std::istream &is, Node<T> *node);
-    LinkedList<T> operator >> (Node<T> &node)
+    LinkedList<T> operator >> (Node<T> &node);
+    LinkedList<T> operator << (Node<T> node);
 };
 
 /**
@@ -310,10 +310,11 @@ LinkedList<T> LinkedList<T>::operator +(LinkedList<T> *lista){
 }
 
 /**
- * @brief Sobrecarga do operador >>, que remove o último elemento da lista e adiciona ao node especificado.
+ * @brief Sobrecarga do operador >> que remove o último elemento da lista atribuindo seu valor à node.
  * 
- * @param node Node a ser adicionado.
- * @return istream& 
+ * @tparam T 
+ * @param node 
+ * @return LinkedList<T> 
  */
 template <typename T>
 LinkedList<T> LinkedList<T>::operator >> (Node<T> &node)
@@ -325,6 +326,19 @@ LinkedList<T> LinkedList<T>::operator >> (Node<T> &node)
     }
     tail = curr;
     removeValue(curr->getNext()->getValue());
+}
+/**
+ * @brief Sobrecarga do operador <<, que adiciona o node especificado ao final da lista.
+ * 
+ * @tparam T 
+ * @param node 
+ * @return LinkedList<T> 
+ */
+template <typename T>
+LinkedList<T> LinkedList<T>::operator << (Node<T> node)
+{
+    if(node == nullptr) return *this;
+    add(node);
 }
 
 
