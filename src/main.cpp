@@ -4,6 +4,7 @@
  */
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "Node.hpp"
 #include "LinkedList.hpp"
@@ -21,6 +22,9 @@
  */
 void setup(LinkedList<Song> &songs, LinkedList<Playlist> &playlists){
     int choice;
+    std::fstream arquivo;
+    arquivo.open("input.txt", std::ios::in);
+    std::string linha;
 
     std::cout << "Deseja executar o setup inicial? Isso irá adicionar\n" <<
                  "alguns exemplos de músicas e playlists\n";
@@ -33,43 +37,50 @@ void setup(LinkedList<Song> &songs, LinkedList<Playlist> &playlists){
 
     if(choice == 0) return;
 
-    Song mus1("Música 1", "Autor 1");
-    Song mus2("Música 2", "Autor 2");
-    Song mus3("Música 3", "Autor 3");
-    Song mus4("Música 4", "Autor 4");
+    while(getline(arquivo, linha)){
+        std::string palavra = "";
+        std::string autor = "";
+        std::string play = "";
+        Playlist *x;
 
-    Playlist pl1("Playlist 1");
-    Playlist pl2("Playlist 2");
-    Playlist pl3("Playlist 3");
-
-    songs.add(mus1);
-    songs.add(mus2);
-    songs.add(mus3);
-    songs.add(mus4);
-
-    playlists.add(pl1);
-    playlists.add(pl2);
-    playlists.add(pl3);
-
-    auto pl1ptr = playlists.searchValue(pl1);
-    auto pl2ptr = playlists.searchValue(pl2);
-    auto pl3ptr = playlists.searchValue(pl3);
-
-    pl1ptr->addSong(mus1);
-    pl1ptr->addSong(mus2);
-    pl1ptr->addSong(mus3);
-
-    pl2ptr->addSong(mus1);
-    pl2ptr->addSong(mus4);
+        for(auto c: linha){
+            if(c == ';'){
+                Playlist pl(palavra);
+                playlists.add(pl);
+                x = playlists.searchValue(pl);
+                play = palavra;
+                palavra = "";
+                continue;
+            }
+            else if(c == ':'){
+                autor = palavra;
+                palavra = "";
+                continue;
+            }
+            else if(c == ',' || c == '.'){
+                Song mus(autor, palavra);
+                songs.add(mus);
+                x->addSong(mus);
+    
+                autor = "";
+                palavra = "";
+                continue;
+            }
+            palavra += c;
+        }
+        
+    }
 
     std::cout << "Setup completo\n";
     std::cout << "Pressione ENTER para continuar.";
     std::cin.get();
 }
 
+
 int main(int argc, char *argv[]){
     LinkedList<Playlist> playlists;
     LinkedList<Song> songs;
+
     
     setup(songs, playlists);
 
