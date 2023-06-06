@@ -24,6 +24,8 @@ void playlistMenu(LinkedList<Playlist> &playlists){
     std::cout << "1. Adicionar playlist\n";
     std::cout << "2. Remover playlist\n";
     std::cout << "3. Listar playlists\n";
+    std::cout << "4. Adicionar playlist (concatenar playlists)\n";
+    std::cout << "5. Adicionar playlist (diferença de playlists)\n";
     std::cout << "0. Voltar\n";
     std::cout << "Digite sua escolha: ";
 
@@ -74,6 +76,99 @@ void playlistMenu(LinkedList<Playlist> &playlists){
             else{
                 std::cout << "Playlists:\n";
                 playlists.print();
+            }
+            break;
+        case 4: // Concatenar playlists
+            std::cout << "Digite o nome da primeira playlist para concatenar, ou deixe em branco para cancelar:\n";
+            std::getline(std::cin, line);
+            if(line != ""){
+                Playlist *first = playlists.searchValue(Playlist(line));
+                if(first == nullptr){
+                    std::cout << "Erro: Playlist inválida.\n";
+                }
+                else{
+                    std::cout << "Digite o nome da segunda playlist para concatenar, ou deixe em branco para cancelar:\n";
+                    std::getline(std::cin, line);
+                    if(line != ""){
+                        Playlist *second = playlists.searchValue(Playlist(line));
+                        if(second == nullptr){
+                            std::cout << "Erro: Playlist inválida.\n";
+                        }
+                        else{
+                            std::cout << "Digite o nome da playlist resultante, ou deixe em branco para cancelar:\n";
+                            std::getline(std::cin, line);
+                            if(line != ""){
+                                if(playlists.searchValue(Playlist(line)) != nullptr){
+                                    std::cout << "Erro: A playlist \"" << line << "\" já existe.\n";
+                                }
+                                else{
+                                    Playlist *result = new Playlist(line);
+                                    *result = *result + *first;
+                                    *result = *result + *second;
+                                    playlists.add(*result);
+
+                                    std::cout << "Playlist \"" << line << "\" adicionada com sucesso.\n";
+                                }
+                            }
+                            else{
+                                std::cout << "Ação cancelada.\n";
+                            }
+                        }
+                    }
+                    else{
+                        std::cout << "Ação cancelada.\n";
+                    }
+                }
+            }
+            else{
+                std::cout << "Ação cancelada.\n";
+            }
+            break;
+
+        case 5: // Diferença de playlists
+            std::cout << "Digite o nome da primeira playlist, ou deixe em branco para cancelar:\n";
+            std::getline(std::cin, line);
+            if(line != ""){
+                Playlist *first = playlists.searchValue(Playlist(line));
+                if(first == nullptr){
+                    std::cout << "Erro: Playlist inválida.\n";
+                }
+                else{
+                    std::cout << "Digite o nome da segunda playlist, ou deixe em branco para cancelar:\n";
+                    std::getline(std::cin, line);
+                    if(line != ""){
+                        Playlist *second = playlists.searchValue(Playlist(line));
+                        if(second == nullptr){
+                            std::cout << "Erro: Playlist inválida.\n";
+                        }
+                        else{
+                            std::cout << "Digite o nome da playlist resultante, ou deixe em branco para cancelar:\n";
+                            std::getline(std::cin, line);
+                            if(line != ""){
+                                if(playlists.searchValue(Playlist(line)) != nullptr){
+                                    std::cout << "Erro: A playlist \"" << line << "\" já existe.\n";
+                                }
+                                else{
+                                    Playlist *result = new Playlist(line);
+                                    *result - *first;
+                                    *result - *second;
+                                    playlists.add(*result);
+
+                                    std::cout << "Playlist \"" << line << "\" adicionada com sucesso.\n";
+                                }
+                            }
+                            else{
+                                std::cout << "Ação cancelada.\n";
+                            }
+                        }
+                    }
+                    else{
+                        std::cout << "Ação cancelada.\n";
+                    }
+                }
+            }
+            else{
+                std::cout << "Ação cancelada.\n";
             }
             break;
 
@@ -238,7 +333,7 @@ void songPlaylistMenu(LinkedList<Song> &songs, LinkedList<Playlist> &playlists){
                 std::cout << "Erro: Música já está na playlist.\n";
             }
             else{
-                pl->addSong(*musica);
+                *pl << *musica;
                 std::cout << "Música adicionada com sucesso.\n";
             }
             break;
@@ -264,10 +359,12 @@ void songPlaylistMenu(LinkedList<Song> &songs, LinkedList<Playlist> &playlists){
                 std::cout << "A playlist \"" << pl->getName() << "\" não possui músicas.\n";
             }
             break;
+
     }
     std::cout << "Pressione ENTER para continuar.";
     std::cin.get();
 }
+
 
 /**
  * @brief Toca as músicas, em sequência, da playlist selecionada.

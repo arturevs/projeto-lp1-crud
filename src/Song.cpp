@@ -80,3 +80,12 @@ std::ostream& operator<<(std::ostream& os, const Song &song){
     return os;
 }
 
+void Song::operator=(Song &b){
+    this->setTitle(b.getTitle());
+    this->setAuthor(b.getAuthor());
+}
+
+void Song::operator=(Song *b){
+    this->setTitle(b->getTitle());
+    this->setAuthor(b->getAuthor());
+}

@@ -112,16 +112,22 @@ bool Playlist::operator==(Playlist &b){
  * @return Playlist 
  */
 
-    Playlist Playlist::operator <<(Song &song)
+    Playlist* Playlist::operator <<(Song &song)
     {
         if (&song == nullptr)
-            return *this;
+            return this;
         addSong(song);
-        return *this;
+        return this;
     }
 
     Playlist Playlist::operator>>(Song &song)
     {
+        // se a a playlist estiver vazia, preenche song com nullptr
+        if (songs.getSize() == 0)
+        {
+            song = nullptr;
+            return *this;
+        }
         // associa ao title de song o title da última música de songs
         song = songs.getTail()->getValue();
         // remove a última música de songs
@@ -198,8 +204,8 @@ bool Playlist::operator==(Playlist &b){
         return newPlaylist;
     }
 
-    Playlist Playlist::operator -(Song &song)
+    Playlist* Playlist::operator -(Song song)
     {
         removeSong(song);
-        return *this;
+        return this;
     }

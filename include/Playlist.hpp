@@ -45,7 +45,7 @@ public:
     // Sobrecarga de operador de igualdade. 
     bool operator==(Playlist &b);
     // Sobrecarga de operador de inserção da playlist. 
-    Playlist operator<<(Song &song);
+    Playlist* operator<<(Song &song);
     // Sobrecarga de operador de extração da playlist.
     Playlist operator>>(Song &song);
     // Sobrecarga de operador << ostream.
@@ -63,7 +63,7 @@ public:
     // Sobrecarga de operador - com playlist de argumento.
     Playlist operator-(Playlist &playlist);
     // Sobrecarga de operador - com song de argumento.
-    Playlist operator-(Song &song);
+    Playlist* operator-(Song song);
 };
 
 #endif

@@ -67,7 +67,7 @@ void setup(LinkedList<Song> &songs, LinkedList<Playlist> &playlists){
     std::cin.get();
 }
 
-int main(){
+int main(int argc, char *argv[]){
     LinkedList<Playlist> playlists;
     LinkedList<Song> songs;
     

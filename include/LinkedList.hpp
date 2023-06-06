@@ -342,4 +342,5 @@ LinkedList<T> LinkedList<T>::operator << (Node<T> node)
 }
 
 
+
 #endif

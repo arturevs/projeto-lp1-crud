@@ -35,6 +35,8 @@ public:
     bool operator==(Song &b);
     //Sobrecarga do operador de inserção.
     friend std::ostream& operator<<(std::ostream& os, const Song& song);
+    void operator=(Song &b);
+    void operator=(Song *b);
 };
 
 #endif
