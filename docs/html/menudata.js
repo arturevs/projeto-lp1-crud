@@ -54,7 +54,7 @@ var menudata={children:[
 {text:"s",url:"functions_func.html#index_s"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Variáveis",url:"functions_vars.html"},
-{text:"Funções Relacionadas",url:"functions_rela.html"}]}]},
+{text:"Símbolos relacionados",url:"functions_rela.html"}]}]},
 {text:"Arquivos",url:"files.html",children:[
 {text:"Lista de Arquivos",url:"files.html"},
 {text:"Membros dos Arquivos",url:"globals.html",children:[

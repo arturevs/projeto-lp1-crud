@@ -1,7 +1,7 @@
 Projeto 1 - Playlists
 
-Autor: Pedro Vinícius Oliveira Maciel Pinho
-
+Autor do projeto original: Pedro Vinícius Oliveira Maciel Pinho.
+Autores das modificações do projeto 2: Artur Revorêdo Pinto e Raquel da Costa Freire.
 
 
 O programa permite a criação de músicas e playlists, e também permite 

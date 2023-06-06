@@ -1,24 +1,25 @@
-\hypertarget{main_8cpp}{}\doxysection{Referência do Arquivo src/main.cpp}
-\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+\doxysection{Referência do Arquivo src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
 
 
 Arquivo principal do programa.  
 
 
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include \char`\"{}Node.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Linked\+List.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Song.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Playlist.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}menu.\+hpp\char`\"{}}\newline
-\doxysubsection*{Funções}
+{\ttfamily \#include \"{}Node.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}Linked\+List.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}Song.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}Playlist.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}menu.\+hpp\"{}}\newline
+\doxysubsubsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{main_8cpp_a1310e1a9a31c61cae7202d3fe76357e7}{setup}} (\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classSong}{Song}} $>$ \&songs, \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&playlists)
 \begin{DoxyCompactList}\small\item\em Setup inicial do programa, que adiciona exemplos de músicas e playlists para demonstrar as funcionalidades do programa. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
-int {\bfseries main} ()
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -28,7 +29,7 @@ Arquivo principal do programa.
 
 
 \doxysubsection{Funções}
-\mbox{\Hypertarget{main_8cpp_a1310e1a9a31c61cae7202d3fe76357e7}\label{main_8cpp_a1310e1a9a31c61cae7202d3fe76357e7}} 
+\Hypertarget{main_8cpp_a1310e1a9a31c61cae7202d3fe76357e7}\label{main_8cpp_a1310e1a9a31c61cae7202d3fe76357e7} 
 \index{main.cpp@{main.cpp}!setup@{setup}}
 \index{setup@{setup}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{setup()}{setup()}}
@@ -40,8 +41,8 @@ Setup inicial do programa, que adiciona exemplos de músicas e playlists para de
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em songs} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de músicas (\mbox{\hyperlink{classSong}{Song}}) do sistema. \\
+{\em songs} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de músicas (\doxylink{classSong}{Song}) do sistema. \\
 \hline
-{\em playlists} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de playlists (\mbox{\hyperlink{classPlaylist}{Playlist}}) do sistema. \\
+{\em playlists} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de playlists (\doxylink{classPlaylist}{Playlist}) do sistema. \\
 \hline
 \end{DoxyParams}

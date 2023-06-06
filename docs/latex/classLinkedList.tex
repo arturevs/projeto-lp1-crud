@@ -1,5 +1,5 @@
-\hypertarget{classLinkedList}{}\doxysection{Referência do \texorpdfstring{$<$}{<}em\texorpdfstring{$>$}{>}Template\texorpdfstring{$<$}{<}/em\texorpdfstring{$>$}{>} da Classe Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
-\label{classLinkedList}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysection{Referência do \texorpdfstring{$<$}{<}em\texorpdfstring{$>$}{>}Template\texorpdfstring{$<$}{<}/em\texorpdfstring{$>$}{>} da Classe Linked\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classLinkedList}{}\label{classLinkedList}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 
 
 Classe que implementa uma lista encadeada template.  
@@ -9,44 +9,59 @@ Classe que implementa uma lista encadeada template.
 
 {\ttfamily \#include $<$Linked\+List.\+hpp$>$}
 
-\doxysubsection*{Membros Públicos}
+\doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classLinkedList_a3c20fcfec867e867f541061a09fc640c}{Linked\+List}} ()
 \begin{DoxyCompactList}\small\item\em Construtor da lista encadeada. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}\label{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}} 
-{\bfseries $\sim$\+Linked\+List} ()
+\Hypertarget{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7}\label{classLinkedList_a7c37609df3b83bc4eb0281b852f93fd7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Linked\+List} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da lista encadeada, que remove todos os elementos. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinkedList_a50c26292740c964ac7bef0e072868be1}\label{classLinkedList_a50c26292740c964ac7bef0e072868be1}} 
+\Hypertarget{classLinkedList_a2e6c246781e458f803203e9c75c6aa90}\label{classLinkedList_a2e6c246781e458f803203e9c75c6aa90} 
+{\bfseries Linked\+List} (const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&other)
+\item 
+\Hypertarget{classLinkedList_a50c26292740c964ac7bef0e072868be1}\label{classLinkedList_a50c26292740c964ac7bef0e072868be1} 
 void {\bfseries clear} ()
 \begin{DoxyCompactList}\small\item\em Remove todos os elementos da lista. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{classLinkedList_a9ad1b3f891d6e3807c9d50d00d113100}{get\+Size}} () const
 \begin{DoxyCompactList}\small\item\em Retorna o tamanho da lista encadeada. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLinkedList_a66e8657412447dfe945f5234e072b20f}{get\+Head}} ()
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinkedList_aa8d64d50c18e660b32ead659cdddc98f}{get\+Head}} () const
 \begin{DoxyCompactList}\small\item\em Retorna a cabeça da lista. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLinkedList_a0ab66d5b6fa180ad2d207e5b975c3d71}{get\+Tail}} ()
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinkedList_a0ab66d5b6fa180ad2d207e5b975c3d71}{get\+Tail}} ()
 \begin{DoxyCompactList}\small\item\em Retorna a cauda da lista. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classLinkedList_ada61b42e752f21b06c6cdd0b6c21b1b7}{set\+Head}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$\mbox{\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head}})
+void \mbox{\hyperlink{classLinkedList_ada61b42e752f21b06c6cdd0b6c21b1b7}{set\+Head}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}{head}})
 \begin{DoxyCompactList}\small\item\em Altera o ponteiro cabeça da lista. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classLinkedList_ac81349168ff8b5c6f31f7749e825c7d0}{set\+Tail}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$\mbox{\hyperlink{classLinkedList_a292d3ee3e80138c8d801115d1d15e110}{tail}})
+void \mbox{\hyperlink{classLinkedList_ac81349168ff8b5c6f31f7749e825c7d0}{set\+Tail}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classLinkedList_a292d3ee3e80138c8d801115d1d15e110}{tail}})
 \begin{DoxyCompactList}\small\item\em Altera o ponteiro cauda da lista. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLinkedList_a188425c092c410b45ab70a3d396aff67}{add}} (T value)
 \begin{DoxyCompactList}\small\item\em Adiciona um novo elemento com valor especificado ao final da lista. \end{DoxyCompactList}\item 
-T $\ast$ \mbox{\hyperlink{classLinkedList_a18c43911e5d1a31488c0299acf68aeaf}{search\+Value}} (T value)
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinkedList_a18c43911e5d1a31488c0299acf68aeaf}{search\+Value}} (T value)
 \begin{DoxyCompactList}\small\item\em Procura um elemento específico na lista. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLinkedList_ad8588293b536ea6297d726843668bab8}{remove\+Value}} (T value)
 \begin{DoxyCompactList}\small\item\em Remove o elemento especificado da lista. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinkedList_a9675767b81fb9f1d8799444e4ee7f43b}\label{classLinkedList_a9675767b81fb9f1d8799444e4ee7f43b}} 
+\Hypertarget{classLinkedList_a9675767b81fb9f1d8799444e4ee7f43b}\label{classLinkedList_a9675767b81fb9f1d8799444e4ee7f43b} 
 void {\bfseries print} ()
-\begin{DoxyCompactList}\small\item\em Imprime todos os elementos da lista recursivamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactList}\small\item\em Imprime todos os elementos da lista recursivamente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a70ee6ccad38d91d0f36349ad29b01067}{add\+Elementos}} (const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&lista)
+\begin{DoxyCompactList}\small\item\em Adiciona os elementos de uma lista encadeada a outra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLinkedList_a6ba71da18a31c481365136d3bc6779f9}{remove\+Elementos}} (\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Remove os elementos de uma lista encadeada de outra. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList_a1451e158b137e694a438d5f83e358ce0}{Linked\+List}} (const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Retorna uma cópia da lista encadeada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \mbox{\hyperlink{classLinkedList_a467b00081ef63b2cfe7864cb93b2b77b}{operator+}} (\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de igualdade, que adiciona os elementos de uma lista a outra. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \mbox{\hyperlink{classLinkedList_a8304cfbc233e532ff60ecf7e4712e813}{operator$>$$>$}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \&node)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} que remove o último elemento da lista atribuindo seu valor à node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \mbox{\hyperlink{classLinkedList_a76b2e557afb17afa984b4e306b91f7fa}{operator$<$$<$}} (\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ node)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}, que adiciona o node especificado ao final da lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}\label{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}} 
-\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ {\bfseries head}
+\Hypertarget{classLinkedList_a35e09287e2d2943707b011208e7a8ed2}\label{classLinkedList_a35e09287e2d2943707b011208e7a8ed2} 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} {\bfseries head}
 \begin{DoxyCompactList}\small\item\em Ponteiro para o primeiro elemento da lista. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinkedList_a292d3ee3e80138c8d801115d1d15e110}\label{classLinkedList_a292d3ee3e80138c8d801115d1d15e110}} 
-\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ {\bfseries tail}
+\Hypertarget{classLinkedList_a292d3ee3e80138c8d801115d1d15e110}\label{classLinkedList_a292d3ee3e80138c8d801115d1d15e110} 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} {\bfseries tail}
 \begin{DoxyCompactList}\small\item\em Ponteiro para o último elemento da lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -56,17 +71,17 @@ class Linked\+List$<$ T $>$}
 Classe que implementa uma lista encadeada template. 
 
 
-\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+\begin{DoxyTemplParams}{Parâmetros do template}
 {\em T} & Tipo do valor armazenado na lista. \\
 \hline
 \end{DoxyTemplParams}
 
 
 \doxysubsection{Construtores e Destrutores}
-\mbox{\Hypertarget{classLinkedList_a3c20fcfec867e867f541061a09fc640c}\label{classLinkedList_a3c20fcfec867e867f541061a09fc640c}} 
+\Hypertarget{classLinkedList_a3c20fcfec867e867f541061a09fc640c}\label{classLinkedList_a3c20fcfec867e867f541061a09fc640c} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
 \index{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{classLinkedList}{\+::\+Linked\+List}}}
 
@@ -74,10 +89,24 @@ Classe que implementa uma lista encadeada template.
 
 Construtor da lista encadeada. 
 
+\Hypertarget{classLinkedList_a1451e158b137e694a438d5f83e358ce0}\label{classLinkedList_a1451e158b137e694a438d5f83e358ce0} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\mbox{\hyperlink{classLinkedList}{\+::\+Linked\+List}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Retorna uma cópia da lista encadeada. 
+
+\begin{DoxyReturn}{Retorna}
+Cópia da lista encadeada. 
+\end{DoxyReturn}
 
 
 \doxysubsection{Documentação das funções}
-\mbox{\Hypertarget{classLinkedList_a188425c092c410b45ab70a3d396aff67}\label{classLinkedList_a188425c092c410b45ab70a3d396aff67}} 
+\Hypertarget{classLinkedList_a188425c092c410b45ab70a3d396aff67}\label{classLinkedList_a188425c092c410b45ab70a3d396aff67} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!add@{add}}
 \index{add@{add}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{add()}{add()}}
@@ -93,12 +122,28 @@ Adiciona um novo elemento com valor especificado ao final da lista.
 {\em value} & Valor a ser adicionado. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classLinkedList_a66e8657412447dfe945f5234e072b20f}\label{classLinkedList_a66e8657412447dfe945f5234e072b20f}} 
+\Hypertarget{classLinkedList_a70ee6ccad38d91d0f36349ad29b01067}\label{classLinkedList_a70ee6ccad38d91d0f36349ad29b01067} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!addElementos@{addElementos}}
+\index{addElementos@{addElementos}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addElementos()}{addElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::add\+Elementos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption})}
+
+
+
+Adiciona os elementos de uma lista encadeada a outra. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & Lista encadeada a ser adicionada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_aa8d64d50c18e660b32ead659cdddc98f}\label{classLinkedList_aa8d64d50c18e660b32ead659cdddc98f} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getHead@{getHead}}
 \index{getHead@{getHead}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::get\+Head}
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::get\+Head}
 
 
 
@@ -107,7 +152,7 @@ Retorna a cabeça da lista.
 \begin{DoxyReturn}{Retorna}
 Ponteiro para o primeiro elemento da lista. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classLinkedList_a9ad1b3f891d6e3807c9d50d00d113100}\label{classLinkedList_a9ad1b3f891d6e3807c9d50d00d113100}} 
+\Hypertarget{classLinkedList_a9ad1b3f891d6e3807c9d50d00d113100}\label{classLinkedList_a9ad1b3f891d6e3807c9d50d00d113100} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getSize@{getSize}}
 \index{getSize@{getSize}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
@@ -121,12 +166,12 @@ Retorna o tamanho da lista encadeada.
 \begin{DoxyReturn}{Retorna}
 Tamanho da lista. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classLinkedList_a0ab66d5b6fa180ad2d207e5b975c3d71}\label{classLinkedList_a0ab66d5b6fa180ad2d207e5b975c3d71}} 
+\Hypertarget{classLinkedList_a0ab66d5b6fa180ad2d207e5b975c3d71}\label{classLinkedList_a0ab66d5b6fa180ad2d207e5b975c3d71} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getTail@{getTail}}
 \index{getTail@{getTail}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getTail()}{getTail()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::get\+Tail}
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::get\+Tail}
 
 
 
@@ -135,7 +180,90 @@ Retorna a cauda da lista.
 \begin{DoxyReturn}{Retorna}
 Ponteiro para o último elemento da lista. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classLinkedList_ad8588293b536ea6297d726843668bab8}\label{classLinkedList_ad8588293b536ea6297d726843668bab8}} 
+\Hypertarget{classLinkedList_a467b00081ef63b2cfe7864cb93b2b77b}\label{classLinkedList_a467b00081ef63b2cfe7864cb93b2b77b} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de igualdade, que adiciona os elementos de uma lista a outra. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & Lista encadeada a ser adicionada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Lista encadeada com os elementos adicionados. 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a76b2e557afb17afa984b4e306b91f7fa}\label{classLinkedList_a76b2e557afb17afa984b4e306b91f7fa} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$}]{node }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}, que adiciona o node especificado ao final da lista. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do template}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Linked\+List$<$\+T$>$ 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a8304cfbc233e532ff60ecf7e4712e813}\label{classLinkedList_a8304cfbc233e532ff60ecf7e4712e813} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \&}]{node }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} que remove o último elemento da lista atribuindo seu valor à node. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do template}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em node} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Linked\+List$<$\+T$>$ 
+\end{DoxyReturn}
+\Hypertarget{classLinkedList_a6ba71da18a31c481365136d3bc6779f9}\label{classLinkedList_a6ba71da18a31c481365136d3bc6779f9} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!removeElementos@{removeElementos}}
+\index{removeElementos@{removeElementos}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeElementos()}{removeElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::remove\+Elementos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{lista }\end{DoxyParamCaption})}
+
+
+
+Remove os elementos de uma lista encadeada de outra. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & Lista encadeada a ser removida. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLinkedList_ad8588293b536ea6297d726843668bab8}\label{classLinkedList_ad8588293b536ea6297d726843668bab8} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!removeValue@{removeValue}}
 \index{removeValue@{removeValue}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{removeValue()}{removeValue()}}
@@ -151,12 +279,12 @@ Remove o elemento especificado da lista.
 {\em value} & Valor a ser removido. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classLinkedList_a18c43911e5d1a31488c0299acf68aeaf}\label{classLinkedList_a18c43911e5d1a31488c0299acf68aeaf}} 
+\Hypertarget{classLinkedList_a18c43911e5d1a31488c0299acf68aeaf}\label{classLinkedList_a18c43911e5d1a31488c0299acf68aeaf} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!searchValue@{searchValue}}
 \index{searchValue@{searchValue}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{searchValue()}{searchValue()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-T $\ast$ \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::search\+Value (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::search\+Value (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -170,12 +298,12 @@ Procura um elemento específico na lista.
 \begin{DoxyReturn}{Retorna}
 Retorna o ponteiro para o valor, caso ele esteja na lista, ou nullptr, caso contrário. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classLinkedList_ada61b42e752f21b06c6cdd0b6c21b1b7}\label{classLinkedList_ada61b42e752f21b06c6cdd0b6c21b1b7}} 
+\Hypertarget{classLinkedList_ada61b42e752f21b06c6cdd0b6c21b1b7}\label{classLinkedList_ada61b42e752f21b06c6cdd0b6c21b1b7} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!setHead@{setHead}}
 \index{setHead@{setHead}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{setHead()}{setHead()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::set\+Head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$}]{head }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::set\+Head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
 
 
 
@@ -186,12 +314,12 @@ Altera o ponteiro cabeça da lista.
 {\em head} & Novo ponteiro. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classLinkedList_ac81349168ff8b5c6f31f7749e825c7d0}\label{classLinkedList_ac81349168ff8b5c6f31f7749e825c7d0}} 
+\Hypertarget{classLinkedList_ac81349168ff8b5c6f31f7749e825c7d0}\label{classLinkedList_ac81349168ff8b5c6f31f7749e825c7d0} 
 \index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!setTail@{setTail}}
 \index{setTail@{setTail}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{setTail()}{setTail()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::set\+Tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$}]{tail }\end{DoxyParamCaption})}
+void \mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ T $>$\+::set\+Tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{tail }\end{DoxyParamCaption})}
 
 
 

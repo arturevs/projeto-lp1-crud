@@ -1,7 +1,7 @@
 var searchData=
 [
   ['getauthor_0',['getAuthor',['../classSong.html#ad72d1bb43a19e4c84f1f883bd48f49db',1,'Song']]],
-  ['gethead_1',['getHead',['../classLinkedList.html#a66e8657412447dfe945f5234e072b20f',1,'LinkedList']]],
+  ['gethead_1',['getHead',['../classLinkedList.html#aa8d64d50c18e660b32ead659cdddc98f',1,'LinkedList']]],
   ['getname_2',['getName',['../classPlaylist.html#a569ad905cc657c46f25b210a21186b2f',1,'Playlist']]],
   ['getnext_3',['getNext',['../classNode.html#a688501032615bbd05c9f42ef89d63db5',1,'Node']]],
   ['getsize_4',['getSize',['../classLinkedList.html#a9ad1b3f891d6e3807c9d50d00d113100',1,'LinkedList::getSize()'],['../classPlaylist.html#af3a8ab6fa7f62859baa8173a50f26b19',1,'Playlist::getSize()']]],

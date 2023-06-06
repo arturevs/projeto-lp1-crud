@@ -1,5 +1,5 @@
-\hypertarget{menu_8hpp}{}\doxysection{Referência do Arquivo include/menu.hpp}
-\label{menu_8hpp}\index{include/menu.hpp@{include/menu.hpp}}
+\doxysection{Referência do Arquivo include/menu.hpp}
+\hypertarget{menu_8hpp}{}\label{menu_8hpp}\index{include/menu.hpp@{include/menu.hpp}}
 
 
 Arquivo cabeçalho das funções relacionadas ao menu de gerenciamento de playlists.  
@@ -7,11 +7,11 @@ Arquivo cabeçalho das funções relacionadas ao menu de gerenciamento de playli
 
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include \char`\"{}Node.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Linked\+List.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Song.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Playlist.\+hpp\char`\"{}}\newline
-\doxysubsection*{Funções}
+{\ttfamily \#include \"{}Node.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}Linked\+List.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}Song.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}Playlist.\+hpp\"{}}\newline
+\doxysubsubsection*{Funções}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{menu_8hpp_ae476d435a88302b800f88ce6a2b874ed}{playlist\+Menu}} (\mbox{\hyperlink{classLinkedList}{Linked\+List}}$<$ \mbox{\hyperlink{classPlaylist}{Playlist}} $>$ \&playlists)
@@ -32,7 +32,7 @@ Arquivo cabeçalho das funções relacionadas ao menu de gerenciamento de playli
 
 
 \doxysubsection{Funções}
-\mbox{\Hypertarget{menu_8hpp_a3bde1536bea6b8128ccfdb99ae0d7d6f}\label{menu_8hpp_a3bde1536bea6b8128ccfdb99ae0d7d6f}} 
+\Hypertarget{menu_8hpp_a3bde1536bea6b8128ccfdb99ae0d7d6f}\label{menu_8hpp_a3bde1536bea6b8128ccfdb99ae0d7d6f} 
 \index{menu.hpp@{menu.hpp}!mainMenu@{mainMenu}}
 \index{mainMenu@{mainMenu}!menu.hpp@{menu.hpp}}
 \doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
@@ -44,15 +44,15 @@ Menu principal, que permite chamar os submenus relacionados a músicas e playlis
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em songs} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de músicas (\mbox{\hyperlink{classSong}{Song}}) do sistema. \\
+{\em songs} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de músicas (\doxylink{classSong}{Song}) do sistema. \\
 \hline
-{\em playlists} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de playlists (\mbox{\hyperlink{classPlaylist}{Playlist}}) do sistema. \\
+{\em playlists} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de playlists (\doxylink{classPlaylist}{Playlist}) do sistema. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
 Retorna 1 caso o programa seja encerrado, ou 0 caso contrário. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{menu_8hpp_ae476d435a88302b800f88ce6a2b874ed}\label{menu_8hpp_ae476d435a88302b800f88ce6a2b874ed}} 
+\Hypertarget{menu_8hpp_ae476d435a88302b800f88ce6a2b874ed}\label{menu_8hpp_ae476d435a88302b800f88ce6a2b874ed} 
 \index{menu.hpp@{menu.hpp}!playlistMenu@{playlistMenu}}
 \index{playlistMenu@{playlistMenu}!menu.hpp@{menu.hpp}}
 \doxysubsubsection{\texorpdfstring{playlistMenu()}{playlistMenu()}}
@@ -64,10 +64,10 @@ Menu de playlists, que permite adicionar, remover ou listar músicas no sistema.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em playlists} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de playlists (\mbox{\hyperlink{classPlaylist}{Playlist}}) do sistema. \\
+{\em playlists} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de playlists (\doxylink{classPlaylist}{Playlist}) do sistema. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{menu_8hpp_aca1c026897221daf62bf7bc0f687148e}\label{menu_8hpp_aca1c026897221daf62bf7bc0f687148e}} 
+\Hypertarget{menu_8hpp_aca1c026897221daf62bf7bc0f687148e}\label{menu_8hpp_aca1c026897221daf62bf7bc0f687148e} 
 \index{menu.hpp@{menu.hpp}!playSongs@{playSongs}}
 \index{playSongs@{playSongs}!menu.hpp@{menu.hpp}}
 \doxysubsubsection{\texorpdfstring{playSongs()}{playSongs()}}
@@ -79,10 +79,10 @@ Toca as músicas, em sequência, da playlist selecionada.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em playlists} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de playlists (\mbox{\hyperlink{classPlaylist}{Playlist}}) do sistema. \\
+{\em playlists} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de playlists (\doxylink{classPlaylist}{Playlist}) do sistema. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{menu_8hpp_aa9aad79a704885b521c4c144e227b805}\label{menu_8hpp_aa9aad79a704885b521c4c144e227b805}} 
+\Hypertarget{menu_8hpp_aa9aad79a704885b521c4c144e227b805}\label{menu_8hpp_aa9aad79a704885b521c4c144e227b805} 
 \index{menu.hpp@{menu.hpp}!songMenu@{songMenu}}
 \index{songMenu@{songMenu}!menu.hpp@{menu.hpp}}
 \doxysubsubsection{\texorpdfstring{songMenu()}{songMenu()}}
@@ -94,12 +94,12 @@ Menu de músicas, que permite adicionar, remover ou listar músicas no sistema.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em songs} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de músicas (\mbox{\hyperlink{classSong}{Song}}) do sistema. \\
+{\em songs} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de músicas (\doxylink{classSong}{Song}) do sistema. \\
 \hline
-{\em playlists} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de playlists (\mbox{\hyperlink{classPlaylist}{Playlist}}) do sistema. \\
+{\em playlists} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de playlists (\doxylink{classPlaylist}{Playlist}) do sistema. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{menu_8hpp_a902bae388956c3f6114fe6f4e9ec6733}\label{menu_8hpp_a902bae388956c3f6114fe6f4e9ec6733}} 
+\Hypertarget{menu_8hpp_a902bae388956c3f6114fe6f4e9ec6733}\label{menu_8hpp_a902bae388956c3f6114fe6f4e9ec6733} 
 \index{menu.hpp@{menu.hpp}!songPlaylistMenu@{songPlaylistMenu}}
 \index{songPlaylistMenu@{songPlaylistMenu}!menu.hpp@{menu.hpp}}
 \doxysubsubsection{\texorpdfstring{songPlaylistMenu()}{songPlaylistMenu()}}
@@ -111,8 +111,8 @@ Menu de gerenciamento de músicas em playlists, que permite adicionar, remover o
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em songs} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de músicas (\mbox{\hyperlink{classSong}{Song}}) do sistema. \\
+{\em songs} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de músicas (\doxylink{classSong}{Song}) do sistema. \\
 \hline
-{\em playlists} & Lista encadeada (\mbox{\hyperlink{classLinkedList}{Linked\+List}}) de playlists (\mbox{\hyperlink{classPlaylist}{Playlist}}) do sistema. \\
+{\em playlists} & Lista encadeada (\doxylink{classLinkedList}{Linked\+List}) de playlists (\doxylink{classPlaylist}{Playlist}) do sistema. \\
 \hline
 \end{DoxyParams}

@@ -27,7 +27,7 @@ var indexSectionLabels =
   2: "Arquivos",
   3: "Funções",
   4: "Variáveis",
-  5: "Amigas",
+  5: "Amigos",
   6: "Páginas"
 };
 
