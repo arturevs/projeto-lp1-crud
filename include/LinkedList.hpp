@@ -26,12 +26,14 @@ public:
     // Construtor da lista encadeada. 
     LinkedList();
     ~LinkedList();
+    // construtor copia
+    LinkedList(const LinkedList<T> &other);
     // Remove todos os elementos da lista. 
     void clear();
     // Retorna o tamanho da lista encadeada. 
     size_t getSize() const;
     // Retorna a cabeça da lista. 
-    Node<T> *getHead();
+    Node<T> *getHead() const;
     // Retorna a cauda da lista. 
     Node<T> *getTail();
     // Altera o ponteiro cabeça da lista. 
@@ -47,11 +49,11 @@ public:
     // Imprime todos os elementos da lista recursivamente. 
     void print();
     // Adiciona todos os elementos de uma lista ao final da lista.
-    void addElementos(LinkedList<T> *lista);
+    void addElementos(const LinkedList<T> &lista);
     // Remove todos os elementos de uma lista da lista.
     void removeElementos(LinkedList<T> *lista);
     // Retorna uma cópia da lista.
-    LinkedList<T> copy();
+    LinkedList<T>(const LinkedList<T> *lista);
     // Sobrecarga do operador de igualdade, que adiciona os elementos de uma lista a outra.
     LinkedList<T> operator +(LinkedList<T> *lista);
     // Sobrecarga do operador >>, que remove o último elemento da lista e adiciona ao node passado como parâmetro.
@@ -118,10 +120,9 @@ size_t LinkedList<T>::getSize() const{
  * @return Ponteiro para o primeiro elemento da lista.
  */
 template <typename T>
-Node<T> *LinkedList<T>::getHead(){
+Node<T> *LinkedList<T>::getHead() const{
     return head;
 }
-
 /**
  * @brief Retorna a cauda da lista.
  * 
@@ -254,15 +255,14 @@ void printAux(Node<T> *curr){
  * @param lista Lista encadeada a ser adicionada.
  */
 template <typename T>
-void LinkedList<T>::addElementos(LinkedList<T> *lista){
-    Node<T> *curr = lista->getHead();
-
-    while(curr != nullptr){
-        add(curr->getValue());
-        curr = curr->getNext();
+void LinkedList<T>::addElementos(const LinkedList<T> &lista){
+    Node<T> *currNode = lista.getHead();
+    
+    while(currNode != nullptr){
+        this->add(currNode->getValue());
+        currNode = currNode->getNext();
     }
 }
-
 /**
  * @brief Remove os elementos de uma lista encadeada de outra.
  * 
@@ -270,7 +270,7 @@ void LinkedList<T>::addElementos(LinkedList<T> *lista){
  */
 template <typename T>
 void LinkedList<T>::removeElementos(LinkedList<T> *lista){
-    Node<T> *curr = lista->getHead();
+    Node<T> curr = lista.getHead();
 
     while(curr != nullptr){
         removeValue(curr->getValue());
@@ -284,15 +284,14 @@ void LinkedList<T>::removeElementos(LinkedList<T> *lista){
  * @return Cópia da lista encadeada.
  */
 template <typename T>
-LinkedList<T> LinkedList<T>::copy(){
-    LinkedList<T> lista;
-    Node<T> *curr = head;
+LinkedList<T>::LinkedList(const LinkedList<T> *lista){
+    Node<T> *curr = lista.head;
 
     while(curr != nullptr){
-        lista.add(curr->getValue());
+        Node<T> x = new Node<T>(curr->getValue());
+        add(x);
         curr = curr->getNext();
     }
-    return lista;
 }
 
 /**
@@ -304,7 +303,7 @@ LinkedList<T> LinkedList<T>::copy(){
 
 template <typename T>
 LinkedList<T> LinkedList<T>::operator +(LinkedList<T> *lista){
-    LinkedList<T> listaCopy = copy();
+    LinkedList<T> *listaCopy = new LinkedList(*this);
     listaCopy.addElementos(lista);
     return listaCopy;
 }
@@ -341,6 +340,13 @@ LinkedList<T> LinkedList<T>::operator << (Node<T> node)
     add(node);
 }
 
+template <typename T>
+LinkedList<T>::LinkedList(const LinkedList<T> &other){
+    head = nullptr;
+    tail = nullptr;
+
+    addElementos(other);
+}
 
 
 #endif

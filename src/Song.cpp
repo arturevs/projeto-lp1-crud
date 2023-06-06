@@ -79,13 +79,3 @@ std::ostream& operator<<(std::ostream& os, const Song &song){
     os << "Título: \"" << song.title << "\" - Autor: \"" << song.author << "\"";
     return os;
 }
-
-void Song::operator=(Song &b){
-    this->setTitle(b.getTitle());
-    this->setAuthor(b.getAuthor());
-}
-
-void Song::operator=(Song *b){
-    this->setTitle(b->getTitle());
-    this->setAuthor(b->getAuthor());
-}

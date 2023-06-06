@@ -36,6 +36,7 @@ public:
     LinkedList<Song> &getSongs();
     // Adiciona uma música à playlist. 
     void addSong(Song song);
+    void addSongs(const Playlist &playlist);
     // Remove a música especificada da playlist. 
     void removeSong(Song song);
     // Procura uma música na playlist. 
@@ -51,7 +52,7 @@ public:
     // Sobrecarga de operador << ostream.
     friend std::ostream &operator<<(std::ostream &os, Playlist &playlist);
     // Sobrecarga de operador + com playlit de argumento
-    Playlist operator+(Playlist &playlist);
+    friend Playlist operator+(Playlist &playlist1, Playlist &playlist2);
     // Sobrecarga de operador + com song de argumento
     Playlist operator+(Song &song);
     // Adiciona músicas de uma playlist à outra.
@@ -61,7 +62,7 @@ public:
     // Construtor cópia.
     Playlist(const Playlist &playlist);
     // Sobrecarga de operador - com playlist de argumento.
-    Playlist operator-(Playlist &playlist);
+    friend Playlist operator-(Playlist &playlist1, Playlist &playlist2 );
     // Sobrecarga de operador - com song de argumento.
     Playlist* operator-(Song song);
 };

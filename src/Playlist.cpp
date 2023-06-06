@@ -69,6 +69,15 @@ void Playlist::addSong(Song song){
 }
 
 /**
+ * @brief 
+ * 
+ * @param playlist 
+ */
+void Playlist::addSongs(const Playlist &playlist){
+    getSongs().addElementos(playlist.songs);
+}
+
+/**
  * @brief Remove a música especificada da playlist.
  * 
  * @param title Título da música.
@@ -125,7 +134,6 @@ bool Playlist::operator==(Playlist &b){
         // se a a playlist estiver vazia, preenche song com nullptr
         if (songs.getSize() == 0)
         {
-            song = nullptr;
             return *this;
         }
         // associa ao title de song o title da última música de songs
@@ -148,16 +156,18 @@ bool Playlist::operator==(Playlist &b){
         return os;
     }
 
-    Playlist Playlist::operator+(Playlist &playlist)
+    Playlist operator+(Playlist &playlist1, Playlist &playlist2)
     {
-        Playlist newPlaylist = *this;
-        auto aux = playlist.getSongs().getHead();
+        Playlist *nova = new Playlist(playlist1); 
+        auto aux = playlist2.getSongs().getHead();
         while (aux != nullptr)
         {
-            newPlaylist.addSong(aux->getValue());
+            // busca o song em playlist 1
+            if(playlist1.getSongs().searchValue(aux->getValue()) == nullptr)
+                nova->addSong(aux->getValue());
             aux = aux->getNext();
         }
-        return newPlaylist;
+        return *nova;
     }
 
     Playlist Playlist::operator+(Song &song)
@@ -192,16 +202,16 @@ bool Playlist::operator==(Playlist &b){
         this->songs = playlist.songs;
     }
 
-    Playlist Playlist::operator -(Playlist &playlist)
+    Playlist operator -(Playlist &playlist1, Playlist &playlist2)
     {
-        Playlist newPlaylist = *this;
-        auto aux = playlist.getSongs().getHead();
+        Playlist *nova = new Playlist(playlist1);
+        auto aux = playlist2.getSongs().getHead();
         while (aux != nullptr)
         {
-            newPlaylist.removeSong(aux->getValue());
+            nova->removeSong(aux->getValue());
             aux = aux->getNext();
         }
-        return newPlaylist;
+        return *nova;
     }
 
     Playlist* Playlist::operator -(Song song)

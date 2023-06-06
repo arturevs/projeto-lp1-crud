@@ -150,8 +150,7 @@ void playlistMenu(LinkedList<Playlist> &playlists){
                                 }
                                 else{
                                     Playlist *result = new Playlist(line);
-                                    *result - *first;
-                                    *result - *second;
+                                    *result = *second - *first;
                                     playlists.add(*result);
 
                                     std::cout << "Playlist \"" << line << "\" adicionada com sucesso.\n";
