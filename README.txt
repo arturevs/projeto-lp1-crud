@@ -30,10 +30,14 @@ A documentação doxygen do projeto está disponível no arquivo docs/html/index
 
 Como compilar:
 
+
+
 Na pasta raiz do projeto, utilize os comandos a seguir:
 
 cmake -B build
 cmake --build build
+
+Antes de rodar, adiciona o arquivo input.txt na pasta build.
 
 Como rodar:
 
